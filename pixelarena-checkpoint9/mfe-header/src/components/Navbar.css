@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #1a1a2e;
+  border-bottom: 1px solid #2d2d44;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-brand .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6c5ce7;
+}
+
+.mfe-badge {
+  background: #6c5ce7;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.username {
+  color: #a0a0b0;
+}
+
+.nav-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.nav-button:hover {
+  background: #2563eb;
+}
+
+.notification-btn,
+.cart-btn {
+  position: relative;
+  padding: 10px 16px;
+}
+
+.cart-btn {
+  background: #f59e0b;
+}
+
+.cart-btn:hover {
+  background: #d97706;
+}
+
+.cart-badge {
+  background: #ef4444;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
