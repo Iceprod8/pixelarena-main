@@ -1,0 +1,116 @@
+.lobby {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lobby-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.lobby-header h2 {
+  color: #e0e0e0;
+  font-size: 24px;
+}
+
+.mfe-badge {
+  background: #10b981;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-card {
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.game-card:hover {
+  border-color: #6c5ce7;
+  transform: translateX(4px);
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-name {
+  color: #e0e0e0;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.game-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.players {
+  color: #a0a0b0;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.active {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.status.waiting {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.join-button {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.join-button:hover {
+  background: #5b4cdb;
+  transform: scale(1.05);
+}
+
+.lobby-hint {
+  margin-top: 24px;
+  padding: 16px;
+  background: rgba(108, 92, 231, 0.1);
+  border: 1px dashed #6c5ce7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.lobby-hint p {
+  color: #6c5ce7;
+  font-size: 14px;
+}
