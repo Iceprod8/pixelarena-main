@@ -7,8 +7,8 @@ function App() {
       <Navbar />
       <div style={{ padding: '40px', textAlign: 'center', color: '#a0a0b0' }}>
         <h2 style={{ color: '#6c5ce7', marginBottom: '16px' }}>Header MFE - Standalone</h2>
-        <p>Ce MFE ecoute les evenements <code>game:joined</code></p>
-        <p>Lancez le Lobby pour tester la communication !</p>
+        <p>Ce MFE ecoute les evenements <code>game:joined</code> et <code>cart:add</code></p>
+        <p>Lancez le Lobby ou le Catalog pour tester la communication !</p>
       </div>
     </div>
   );

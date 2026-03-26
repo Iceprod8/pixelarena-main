@@ -13,7 +13,11 @@ const PRODUCTS = [
 
 function ProductCard({ product }) {
   const handleAddToCart = () => {
-    // TODO: emettre un evenement pour ajouter ce produit au panier
+    eventBus.emit('cart:add', {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+    });
   };
 
   return (
@@ -24,7 +28,7 @@ function ProductCard({ product }) {
         <p className="product-price">{product.price} €</p>
       </div>
       <button className="add-button" onClick={handleAddToCart}>
-        Ajouter au panier
+        Ajouter
       </button>
     </div>
   );

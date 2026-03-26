@@ -35,7 +35,15 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // TODO: configurer Module Federation pour exposer le Catalog au Shell
+      name: 'mfeCatalog',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Catalog': './src/components/Catalog',
+      },
+      shared: {
+        react: { singleton: true, requiredVersion: '^18.2.0' },
+        'react-dom': { singleton: true, requiredVersion: '^18.2.0' },
+      },
     }),
     new HtmlWebpackPlugin({ template: './public/index.html' }),
   ],
