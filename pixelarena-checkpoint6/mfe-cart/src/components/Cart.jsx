@@ -1,16 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import eventBus from 'shared/eventBus';
 import './Cart.css';
 
 function Cart() {
   const [items, setItems] = useState([]);
+  const hasMounted = useRef(false);
 
   useEffect(() => {
-    // TODO 1: s'abonner aux ajouts au panier et mettre a jour le state items
+    const unsubscribeCartAdd = eventBus.on('cart:add', (product) => {
+      setItems((currentItems) => [
+        ...currentItems,
+        {
+          ...product,
+          cartId: `${product.id}-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+        },
+      ]);
+    });
+
+    // Garde un listener actif pour rendre l'emission observable dans la console.
+    const unsubscribeCartUpdated = eventBus.on('cart:updated', () => {});
+
+    return () => {
+      unsubscribeCartAdd();
+      unsubscribeCartUpdated();
+    };
   }, []);
 
   useEffect(() => {
-    // TODO 2: emettre un evenement quand le panier change
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      return;
+    }
+
+    const total = items.reduce((sum, item) => sum + item.price, 0);
+
+    eventBus.emit('cart:updated', {
+      count: items.length,
+      total,
+    });
   }, [items]);
 
   const handleRemove = (cartId) => {
