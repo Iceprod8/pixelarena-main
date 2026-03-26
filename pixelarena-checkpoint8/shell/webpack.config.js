@@ -47,7 +47,7 @@ module.exports = {
       name: 'shell',
       remotes: {
         mfeHeader: 'mfeHeader@http://localhost:3001/remoteEntry.js',
-        mfeLobby: 'mfeLobby@http://localhost:3005/remoteEntry.js',
+        mfeLobby: 'mfeLobby@http://localhost:3002/remoteEntry.js',
         mfeCatalog: 'mfeCatalog@http://localhost:3003/remoteEntry.js',
         mfeCart: 'mfeCart@http://localhost:3004/remoteEntry.js',
       },

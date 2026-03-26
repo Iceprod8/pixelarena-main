@@ -50,8 +50,8 @@ module.exports = {
         './Navbar': './src/components/Navbar',
       },
       shared: {
-        react: { singleton: false, requiredVersion: '^18.2.0' },
-        'react-dom': { singleton: false, requiredVersion: '^18.2.0' },
+        react: { singleton: true, requiredVersion: '^18.2.0' },
+        'react-dom': { singleton: true, requiredVersion: '^18.2.0' },
       },
     }),
     new HtmlWebpackPlugin({
