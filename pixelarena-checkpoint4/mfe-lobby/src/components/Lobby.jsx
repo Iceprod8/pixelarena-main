@@ -11,7 +11,12 @@ const GAMES = [
 
 function GameCard({ game }) {
   const handleJoinGame = () => {
-    // TODO: signaler au reste de l'application qu'un joueur a rejoint cette partie
+    eventBus.emit('game:joined', {
+      gameId: game.id,
+      gameName: game.name,
+      players: game.players,
+      status: game.status,
+    });
   };
 
   return (
@@ -45,7 +50,6 @@ function Lobby() {
           <GameCard key={game.id} game={game} />
         ))}
       </div>
-
     </div>
   );
 }
