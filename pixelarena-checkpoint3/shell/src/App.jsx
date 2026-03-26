@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import './App.css';
 
-// TODO: importer le composant Header depuis le MFE distant
-// Indice: React.lazy() + import dynamique
+const RemoteNavbar = lazy(() => import('mfeHeader/Navbar'));
 
 function HeaderFallback() {
   return (
@@ -15,7 +14,9 @@ function HeaderFallback() {
 function App() {
   return (
     <div className="shell">
-      {/* TODO: afficher le Header ici avec un Suspense */}
+      <Suspense fallback={<HeaderFallback />}>
+        <RemoteNavbar notifications={2} />
+      </Suspense>
 
       <main className="shell-content">
         <div className="placeholder">

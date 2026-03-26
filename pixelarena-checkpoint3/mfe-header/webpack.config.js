@@ -41,8 +41,15 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // TODO: configurer ce MFE pour qu'il expose le composant Navbar
-      // Documentation: https://webpack.js.org/plugins/module-federation-plugin/
+      name: 'mfeHeader',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Navbar': './src/components/Navbar',
+      },
+      shared: {
+        react: { singleton: true },
+        'react-dom': { singleton: true },
+      },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
