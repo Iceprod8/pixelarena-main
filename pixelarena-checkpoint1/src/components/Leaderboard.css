@@ -1,0 +1,69 @@
+.leaderboard {
+  background: #1a1a2e;
+  border-radius: 16px;
+  padding: 24px;
+  height: fit-content;
+}
+
+.leaderboard-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.player-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #252542;
+  border-radius: 8px;
+}
+
+.player-rank {
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.player-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.player-score {
+  color: #6c5ce7;
+  font-weight: 600;
+}
+
+.see-all-btn {
+  width: 100%;
+}
+
+/* ===========================================
+   BOUTON DU LEADERBOARD
+   L'equipe Leaderboard a AUSSI defini .button
+   Triple definition = chaos total!
+   =========================================== */
+.button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background: #2563eb;
+}

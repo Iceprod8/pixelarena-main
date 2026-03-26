@@ -1,0 +1,90 @@
+.lobby {
+  background: #1a1a2e;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.lobby-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.game-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #252542;
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateX(4px);
+}
+
+.game-icon {
+  font-size: 32px;
+  width: 50px;
+  text-align: center;
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.game-players {
+  font-size: 14px;
+  color: #a0a0b0;
+}
+
+.join-btn {
+  min-width: 80px;
+}
+
+.create-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2d2d44;
+  border: 2px dashed #4a4a6a;
+}
+
+.create-btn:hover {
+  background: #3d3d5c;
+  border-color: #6c5ce7;
+}
+
+/* ===========================================
+   BOUTON DU LOBBY
+   L'equipe Lobby a AUSSI defini .button ici
+   Ceci va ECRASER le style de la Navbar!
+   =========================================== */
+.button {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background: #2563eb;
+}
